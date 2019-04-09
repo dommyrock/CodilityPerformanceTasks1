@@ -19,3 +19,10 @@ E:\Programming\CodilityPerformanceTasks\qa1\obj\Debug\qa1.csprojAssemblyReferenc
 E:\Programming\CodilityPerformanceTasks\qa1\obj\Debug\qa1.csproj.CoreCompileInputs.cache
 E:\Programming\CodilityPerformanceTasks\qa1\obj\Debug\qa1.exe
 E:\Programming\CodilityPerformanceTasks\qa1\obj\Debug\qa1.pdb
+E:\Programming\GithubRepo\CodilityPerformanceTasks\qa1\bin\Debug\qa1.exe.config
+E:\Programming\GithubRepo\CodilityPerformanceTasks\qa1\bin\Debug\qa1.exe
+E:\Programming\GithubRepo\CodilityPerformanceTasks\qa1\bin\Debug\qa1.pdb
+E:\Programming\GithubRepo\CodilityPerformanceTasks\qa1\obj\Debug\qa1.csprojAssemblyReference.cache
+E:\Programming\GithubRepo\CodilityPerformanceTasks\qa1\obj\Debug\qa1.csproj.CoreCompileInputs.cache
+E:\Programming\GithubRepo\CodilityPerformanceTasks\qa1\obj\Debug\qa1.exe
+E:\Programming\GithubRepo\CodilityPerformanceTasks\qa1\obj\Debug\qa1.pdb

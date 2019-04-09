@@ -60,7 +60,7 @@ namespace qa1
             repeat.Distinct(new int[] { 2, 1, 1, 2, 3, 1 });
             //repeat.Brackets("{[()()]}"); //"([)()]" todo
             //repeat.Nesting("(()(())())");//"())"
-            //repeat.StoneWall(new int[] { 0, 8, 5, 7, 9, 8, 7, 4, 8 });//maybe skip if to long 
+            //repeat.StoneWall(new int[] { 0, 8, 5, 7, 9, 8, 7, 4, 8 });//maybe skip if to long
             //repeat.Dominator(new int[] { 3, 4, 3, 2, 3, -1, 3, 3 });
             //repeat.MinPerimeterRectangle(30);
             //-------------------------------------------------------------------------Extra
@@ -73,13 +73,15 @@ namespace qa1
             extra.Palindrome("Nope");
             extra.OutputToConsole(5);
             extra.MoveNumbersInArrrayToEnd(new int[] { 1, 2, 3, 4, 5 }, 0);//Cubic interview prep
+            extra.PascalsTriangle(6);
+            extra.RowNumberTriangle(5);
 
             Console.ReadKey();
         }
     }
+
     internal class SolutionRepeat
     {
-
         public int BinaryGap(int N)
         {
             string binary = Convert.ToString(N, 2);//convert num to binary represention for base =2
@@ -92,7 +94,6 @@ namespace qa1
                 {
                     ones.Add(i);//add index if num =1
                 }
-
             }
             if (ones.Count > 1)
             {
@@ -125,7 +126,6 @@ namespace qa1
                 {
                     B[(i + K) % A.Length] = A[i];
                 }
-
             }
             return B;
 
@@ -137,12 +137,12 @@ namespace qa1
             //}
 
             //return B;
-
         }
 
         public int OddOccurrencesInArray(int[] A)
         {
             #region First try
+
             //Dictionary<int, int> pairs = new Dictionary<int, int>(); //num/repeated  66% 80% correct
             int solo = 0;
             //for (int i = 0; i < A.Length; i++)
@@ -163,8 +163,10 @@ namespace qa1
             //    {
             //        solo = item.Key;
             //    }
-            //} 
-            #endregion
+            //}
+
+            #endregion First try
+
             //return solo;
             HashSet<int> onlyOne = new HashSet<int>(); //2nd solution 10%
             for (int i = 0; i < A.Length; i++)
@@ -172,7 +174,6 @@ namespace qa1
                 if (!onlyOne.Contains(A[i]))
                 {
                     onlyOne.Add(A[i]);
-
                 }
                 else
                 {
@@ -199,7 +200,7 @@ namespace qa1
             return missing;
             //2nd solution
 
-            //int missing = 1; 
+            //int missing = 1;
 
             //if (A.Length >0)
             //{
@@ -252,7 +253,7 @@ namespace qa1
 
         public int PermCheck(int[] A)
         {
-            //53% 
+            //53%
             //HashSet<int> set = new HashSet<int>(A); //hashset only gets unique numbers(deletes repeated ones)
             //for (int i = 1; i < A.Length; i++)
             //{
@@ -273,13 +274,13 @@ namespace qa1
             }
 
             return result;
-
         }
 
         public int MissingInteger(int[] A)
         {
             return 0;
         }
+
         //6
         public int Distinct(int[] A)
         {
@@ -288,28 +289,24 @@ namespace qa1
             int result = distinct.Count;
             return result;
         }
+
         //7 TODO
         //public int Brackets(string S)
         //{
-
         //}
         //public int Nesting(string S)
         //{
-
         //}
         //public int StoneWall(int[] H)
         //{
-
         //}
         ////8
         //public int Dominator(int[] A)
         //{
-
         //}
         ////
         //public int MinPerimeterRectangle(int N)//perimiter is A*(A+B) -->return it
         //{
-
         //}
     }
 
@@ -1305,6 +1302,7 @@ namespace qa1
             }
             return A;
         }
+
         public void OutputTrianglePattern(int N)
         {
             //for (int i = 1; i <= N; i++)
@@ -1334,7 +1332,7 @@ namespace qa1
             //    Console.WriteLine();
             //}
 
-            //2nd pattern 
+            //2nd pattern
             //for (int i = N; i >=1; i--)
             //{
             //    for (int j = 1; j <=i ; j++)
@@ -1364,6 +1362,7 @@ namespace qa1
             //    Console.WriteLine();
             //}
         }
+
         public void OutputSquarePattern(int N)
         {
             //for (int i = 1; i <= N; i++)
@@ -1375,6 +1374,7 @@ namespace qa1
             //    Console.WriteLine();
             //}
         }
+
         public void OutputIncrementedNumbers(int N)
         {
             for (int i = 0; i < N; i++)
@@ -1390,7 +1390,7 @@ namespace qa1
 
         public int Palindrome(string S)
         {
-            if (S.Length % 2 != 0) //check if number is odd first -else its not palindrome 
+            if (S.Length % 2 != 0) //check if number is odd first -else its not palindrome
             {
                 char[] characters = S.ToCharArray();
                 Array.Reverse(characters);
@@ -1404,8 +1404,8 @@ namespace qa1
             return 0;
             //2nd way shorter
             //return myString.SequenceEqual(myString.Reverse());
-
         }
+
         public int[] MoveNumbersInArrrayToEnd(int[] A, int N)//in second rounf 3,1
         {
             int[] rotatedArray = new int[A.Length];
@@ -1416,7 +1416,7 @@ namespace qa1
             {
                 if (i < N)
                 {
-                    rotatedArray[rotatedArray.Length-N + i] = A[i];//move first ,than print rest to end
+                    rotatedArray[rotatedArray.Length - N + i] = A[i];//move first ,than print rest to end
                 }
                 else
                 {
@@ -1427,7 +1427,7 @@ namespace qa1
 
             return rotatedArray;
         }
-   
+
         public void OutputToConsole(int N)
         {
             //int counter = 1;
@@ -1439,8 +1439,64 @@ namespace qa1
             //    }
             //    Console.WriteLine();
             //}
-
         }
 
+        //TODO practice
+        /*1
+         *121
+         *12321
+         *1234321
+         *123454321
+         *12345654321*/
+
+        public void RowNumberTriangle(int N)
+        {
+            for (int i = 1; i <= N; i++)
+            {
+                int[] nums = new int[i];
+
+                for (int j = 1; j <= i; j++)
+                {
+                    nums[j - 1] = j; //add each to arr
+                    Console.Write(j);
+                }
+                //revere already printed nums and skip miiddle one
+                int[] reversed = nums.Reverse().Skip(1).ToArray();
+                for (int k = 0; k < reversed.Length; k++)
+                {
+                    Console.Write(reversed[k]);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        /* pascal
+         * 1
+         *1 1
+         1 2 1
+        1 3 3 1
+       1 4 6 4 1 */
+
+        public void PascalsTriangle(int N) //todo
+        {
+            //    for (int i = 1; i <= N; i++)
+            //    {
+            //        for (int j = 1; j <= i; j++)
+            //        {
+            //            if (i > 2)
+            //            {
+            //                if (true)
+            //                {
+            //                }
+            //            }
+            //            else
+            //            {
+            //                Console.Write(1);
+            //            }
+            //        }
+            //        Console.WriteLine();
+            //    }
+            //}
+        }
     }
 }
