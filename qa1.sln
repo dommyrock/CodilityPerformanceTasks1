@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qa1", "qa1\qa1.csproj", "{77A9B8D2-80CD-417D-A419-334615898C14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciNumberGenerator", "FibonacciNumberGenerator\FibonacciNumberGenerator.csproj", "{CAF9704D-0524-464F-97F0-15B755580F5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77A9B8D2-80CD-417D-A419-334615898C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A9B8D2-80CD-417D-A419-334615898C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A9B8D2-80CD-417D-A419-334615898C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A9B8D2-80CD-417D-A419-334615898C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF9704D-0524-464F-97F0-15B755580F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF9704D-0524-464F-97F0-15B755580F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF9704D-0524-464F-97F0-15B755580F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF9704D-0524-464F-97F0-15B755580F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB1EC981-AA1F-4C4E-BADC-85FD5D897962}
+	EndGlobalSection
+EndGlobal

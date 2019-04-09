@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EFC9104-3B6B-4343-8A94-29EE194E11CB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Codility</RootNamespace>
+    <AssemblyName>Codility</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbsDistinct.cs" />
+    <Compile Include="ArrayInversionCount.cs" />
+    <Compile Include="BinaryGap.cs" />
+    <Compile Include="Brackets.cs" />
+    <Compile Include="ChocolatesByNumbers.cs" />
+    <Compile Include="CommonPrimeDivisors.cs" />
+    <Compile Include="CountDistinctSlices.cs" />
+    <Compile Include="CountDiv.cs" />
+    <Compile Include="CountFactors.cs" />
+    <Compile Include="CountNonDivisible.cs" />
+    <Compile Include="CountSemiprimes.cs" />
+    <Compile Include="CountTriangles.cs" />
+    <Compile Include="CyclicRotation.cs" />
+    <Compile Include="Demo.cs" />
+    <Compile Include="Distinct.cs" />
+    <Compile Include="Dominator.cs" />
+    <Compile Include="EquiLeader.cs" />
+    <Compile Include="FibFrog.cs" />
+    <Compile Include="Fish.cs" />
+    <Compile Include="Flags.cs" />
+    <Compile Include="FloodDepth.cs" />
+    <Compile Include="FrogJmp.cs" />
+    <Compile Include="FrogRiverOne.cs" />
+    <Compile Include="GenomicRangeQuery.cs" />
+    <Compile Include="Kruno1.cs" />
+    <Compile Include="Kruno2.cs" />
+    <Compile Include="Ladder.cs" />
+    <Compile Include="LongestPassword.cs" />
+    <Compile Include="MaxCounters.cs" />
+    <Compile Include="MaxDoubleSliceSum.cs" />
+    <Compile Include="MaxNonoverlappingSegments.cs" />
+    <Compile Include="MaxProductOfThree.cs" />
+    <Compile Include="MaxProfit.cs" />
+    <Compile Include="MaxSliceSum.cs" />
+    <Compile Include="MergeSort.cs" />
+    <Compile Include="MinAbsSum.cs" />
+    <Compile Include="MinAbsSumOfTwo.cs" />
+    <Compile Include="MinAvgTwoSlice.cs" />
+    <Compile Include="MinMaxDivision.cs" />
+    <Compile Include="MinPerimeterRectangle.cs" />
+    <Compile Include="MissingInteger.cs" />
+    <Compile Include="NailingPlanks.cs" />
+    <Compile Include="Nesting.cs" />
+    <Compile Include="NumberOfDiscIntersections.cs" />
+    <Compile Include="NumberSolitaire.cs" />
+    <Compile Include="OddOccurrencesInArray.cs" />
+    <Compile Include="PassingCars.cs" />
+    <Compile Include="Peaks.cs" />
+    <Compile Include="PermCheck.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RectangleBuilderGreaterArea.cs" />
+    <Compile Include="SocksLaundering.cs" />
+    <Compile Include="StoneWall.cs" />
+    <Compile Include="StrSymmetryPoint.cs" />
+    <Compile Include="TapeEquilibrium.cs" />
+    <Compile Include="Task1.cs" />
+    <Compile Include="Task2.cs" />
+    <Compile Include="TennisTournament.cs" />
+    <Compile Include="TieRopes.cs" />
+    <Compile Include="TimeComplexity.cs" />
+    <Compile Include="TreeHeight.cs" />
+    <Compile Include="Triangle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

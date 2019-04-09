@@ -1,0 +1,7 @@
+E:\Programming\CodilityPerformanceTasks\codiliti-marko\Codility\bin\Debug\Codility.exe.config
+E:\Programming\CodilityPerformanceTasks\codiliti-marko\Codility\bin\Debug\Codility.exe
+E:\Programming\CodilityPerformanceTasks\codiliti-marko\Codility\bin\Debug\Codility.pdb
+E:\Programming\CodilityPerformanceTasks\codiliti-marko\Codility\obj\Debug\Codility.csprojAssemblyReference.cache
+E:\Programming\CodilityPerformanceTasks\codiliti-marko\Codility\obj\Debug\Codility.csproj.CoreCompileInputs.cache
+E:\Programming\CodilityPerformanceTasks\codiliti-marko\Codility\obj\Debug\Codility.exe
+E:\Programming\CodilityPerformanceTasks\codiliti-marko\Codility\obj\Debug\Codility.pdb
