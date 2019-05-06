@@ -76,6 +76,13 @@ namespace qa1
             extra.PascalsTriangle(6);
             extra.RowNumberTriangle(5);
 
+            Practice pr = new Practice();
+            pr.MirrorArray(new int[] { 2, 45, 5, 8, 6 });
+            pr.MoveNumsToEnd(new int[] { 1, 2, 3, 4, 5 }, 3);
+            //pr.PrintToConsole(5);
+            pr.ConsolePatterns(10);
+            pr.MirrorMe(new int[] { 1, 2, 3, 4, 5 });
+
             Console.ReadKey();
         }
     }
@@ -1497,6 +1504,319 @@ namespace qa1
             //        Console.WriteLine();
             //    }
             //}
+        }
+    }
+
+    internal class Practice
+    {
+        //we replace 2 at time !!(so store 1 assign other !
+        public int[] MirrorArray(int[] A)
+        {
+            int tempStore = 0;
+            int counter = 0;
+            for (int i = 0; i < A.Length / 2; i++)
+            {
+                counter++;
+                tempStore = A[i];//store
+                A[i] = A[A.Length - counter];//map 1st
+                A[A.Length - counter] = tempStore;//map 2nd
+            }
+            return A;
+        }
+
+        public int[] MoveNumsToEnd(int[] A, int N)//1,2,3,4,5 ---> 4,5,1,2,3
+        {
+            int[] rotatedArr = new int[A.Length];//copy items to right place in new []
+            int counter = 1;
+            for (int i = 0; i < N; i++)
+            {
+                //if (i >= N)
+                //{
+                //    rotatedArr[counter] = A[i];
+                //    counter++;
+                //}
+                //else
+                //{
+                //    rotatedArr[A.Length - N + i] = A[i];// move item by : A.Length - N-i ) -->each itteration one step back
+                //}
+
+                rotatedArr[A.Length - N + i] = A[i];// 2nd solution /more efficient O (A-N) instead of O(A) in 1st sol.
+                if (i <= A.Length - 1 - N)
+                {
+                    rotatedArr[counter--] = A[A.Length - i - 1];//decrease counter after asignment
+                }
+            }
+            return rotatedArr;
+        }
+
+        //public void PrintToConsole(int N)
+        //{
+        //    Console.WriteLine();
+        //    //int count = 0;
+        //    //for (int i = 1; i <= N; i++)
+        //    //{
+        //    //    for (int j = 1; j <= i; j++)
+        //    //    {
+        //    //        Console.Write(++count);
+        //    //    }
+        //    //    Console.WriteLine();
+        //    //}
+
+        //    //2
+        //    /*1
+        //    *121
+        //    *12321
+        //    *1234321
+        //    *123454321
+        //    *12345654321*/
+
+        //    #region 2
+
+        //    //for (int i = 1; i <= N; i++)
+        //    //{
+        //    //    for (int j = 1; j <= i; j++)
+        //    //    {
+        //    //        Console.Write(j);
+        //    //    }
+        //    //    for (int j = i - 1; j >= 1; j--)
+        //    //    {
+        //    //        Console.Write(j);
+        //    //    }
+        //    //    Console.Write(Environment.NewLine);
+        //    //}
+
+        //    #endregion 2
+
+        //    //3
+        //    /* pascal
+        //    * 1
+        //    *1 1
+        //    1 2 1
+        //   1 3 3 1
+        //   1 4 6 4 1 */
+
+        //    #region Pascal
+
+        //    //int row = Convert.ToInt32(Console.ReadLine()); //input if we wanted
+
+        //    //for (int i = 0; i <= N; i++)
+        //    //{
+        //    //    int k = 1;
+        //    //    for (int j = i; j <= N - 1; j++)
+        //    //    {
+        //    //        Console.Write(" "); //spacings before each row
+        //    //    }
+        //    //    for (int j = 0; j <= i; j++)
+        //    //    {
+        //    //        Console.Write(k);
+        //    //        k = k * (i - j) / (j + 1);
+        //    //    }
+        //    //    Console.WriteLine();
+        //    //}
+
+        //    #endregion Pascal
+
+        //    //3
+
+        //    // *****
+        //    //  ****
+        //    //   ***
+        //    //    **
+        //    //     *
+
+        //    #region 3
+
+        //    for (int i = 1; i <= N; i++)//rows
+        //    {
+        //        for (int j = 1; j <= i; j++)
+        //        {
+        //            Console.Write(" ");
+        //        }
+        //        for (int j = 0; j <= N - i; j++)//columns
+        //        {
+        //            Console.Write("*");
+        //        }
+        //        Console.WriteLine();
+        //    }
+
+        //    #endregion 3
+
+        //    //4
+        //    //?????
+        //    //????
+        //    //???
+        //    //??
+        //    //?
+        //    for (int i = 1; i <= N; i++)
+        //    {
+        //        for (int j = 0; j <= N - i; j++)
+        //        {
+        //            Console.Write("?");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //    //?????
+        //    // ????
+        //    //  ???
+        //    //   ??
+        //    //    ?
+
+        //    for (int i = 1; i <= N; i++)
+        //    {
+        //        for (int j = 2; j <= i; j++)//J=2 to skip " " in 1st line
+        //        {
+        //            Console.Write(" ");
+        //        }
+        //        for (int j = 0; j <= N - i; j++)
+        //        {
+        //            Console.Write("?");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //    //5
+
+        //    //5
+        //    //54
+        //    //543
+        //    //5432
+        //    //54321
+        //    for (int i = 1; i <= N; i++)
+        //    {
+        //        int counter = N;
+        //        for (int j = 1; j <= i; j++)
+        //        {
+        //            Console.Write(counter--);
+        //        }
+        //        Console.WriteLine();
+        //    }
+
+        //    //6
+
+        //    //1****
+        //    //12***
+        //    //123**
+        //    //1234*
+        //    Console.WriteLine();
+        //    for (int i = 1; i <= N; i++)
+        //    {
+        //        for (int j = 1; j <= N; j++)
+        //        {
+        //            if (j <= i)
+        //            {
+        //                Console.Write(j);
+        //            }
+        //            else
+        //            {
+        //                Console.Write("*");
+        //            }
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //}
+
+        public void ConsolePatterns(int N)
+        {
+            //6
+
+            //1***
+            //12**
+            //123*
+            //1234
+            for (int i = 1; i <= N; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j);
+                }
+                for (int k = i + 1; k <= N; k++)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine();
+            }
+            //12345
+            //1234-
+            //123--
+            //12---
+            //1----
+            for (int i = N; i >= 1; i--)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j);
+                }
+                for (int k = i + 1; k <= N; k++)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine();
+            }
+            // reverse/mirrored
+            //12345
+            //-1234
+            //--123
+            //---12
+            //----1
+            for (int i = N; i >= 1; i--)
+            {
+                for (int k = i + 1; k <= N; k++)// k= 11,10,9,8,7...(so each row we get 1 extra "-"
+                {
+                    Console.Write("-");
+                }
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j);
+                }
+                Console.WriteLine();
+            }
+            //----1
+            //---12
+            //--123
+            //-1234
+            //12345
+
+            for (int i = N; i >= 1; i--)
+            {
+                for (int j = 1; j <= i - 1; j++)//k =9,8,7,6,..0 (each row 1 less "-"
+                {
+                    Console.Write("-");
+                }
+                for (int k = 1; k <= N - i + 1; k++)
+                {
+                    Console.Write(k);
+                }
+                Console.WriteLine();
+            }
+            //--------------------------------------------------------------
+
+            for (int i = 1; i <= N; i++)
+            {
+                for (int j = 1; j <= i; j++)/*12345*/
+                {
+                    Console.Write(j);
+                }
+                int ah = i;
+                for (int j = 1; j <= i - 1; j++)/*4321*/
+                {
+                    Console.Write(--ah);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        //TODO .... []tasks  (nimber place switch and mirror arr )
+        public int[] MirrorMe(int[] A)//1,2,3,4,5
+        {
+            int tempStore = 0;
+            int count = 0;
+            for (int i = 0; i < A.Length / 2; i++)// /2 because we switch 2 at single iteration
+            {
+                count++;
+                tempStore = A[i];
+                A[i] = A[A.Length - count];
+                A[A.Length - count] = tempStore;
+            }
+            return A;
         }
     }
 }
